@@ -1,53 +1,57 @@
 # SMA Portfolio Management
 
-Portfolio hub for workflow-oriented SMA platform projects across **equities, bonds, alternatives, ETFs, and mutual funds**.
+**Portfolio index** for workflow-oriented SMA platform projects across **equities, bonds, alternatives, ETFs, and mutual funds**.
 
-## Objective
+This repository serves as an organizational hub and landing page. Each child project is maintained as an independent repository.
 
-This parent repository organizes implementation-focused projects that emphasize:
-- clear visual communication for portfolio decisions,
-- scalable analytics and engineering workflows,
-- explainable outputs for PM, risk, and client-facing use.
+## Projects
 
-## Design principles
+### Risk & Analytics
 
-- **Visualization-first:** dashboards and charts should communicate decisions, not just metrics.
-- **Explainability:** every repo should map outputs to a decision memo format.
+- **[sma-risk-visual-analytics-platform](https://github.com/john-stromberg/sma-risk-visual-analytics-platform)**  
+  Multi-asset risk dashboards, stress views, and monitoring analytics. Outputs: risk panels, scenario visuals, monitoring tables.
+
+- **[sma-data-foundation-platform](https://github.com/john-stromberg/sma-data-foundation-platform)**  
+  Data ingestion, quality controls, and data contracts. Outputs: validated datasets, quality reports.
+
+### Portfolio Construction & Allocation
+
+- **[sma-allocation-scenario-studio](https://github.com/john-stromberg/sma-allocation-scenario-studio)**  
+  Strategic and tactical allocation analysis under scenarios. Outputs: allocation what-if charts, regime comparison.
+
+- **[sma-portfolio-construction-optimizer](https://github.com/john-stromberg/sma-portfolio-construction-optimizer)**  
+  Constrained portfolio construction and optimization. Outputs: optimized weights, constraint diagnostics.
+
+- **[sma-client-customization-lab](https://github.com/john-stromberg/sma-client-customization-lab)**  
+  Client restrictions and customization overlays. Outputs: constraint impact analysis, custom proposals.
+
+### Rebalancing & Trading
+
+- **[sma-rebalancing-trade-workbench](https://github.com/john-stromberg/sma-rebalancing-trade-workbench)**  
+  Drift-aware rebalancing and trade generation. Outputs: trade lists, turnover and cost impact analysis.
+
+### Monitoring & Attribution
+
+- **[sma-performance-attribution-studio](https://github.com/john-stromberg/sma-performance-attribution-studio)**  
+  Benchmark-relative performance attribution. Outputs: attribution waterfall, sleeve diagnostics.
+
+- **[sma-compliance-monitoring-console](https://github.com/john-stromberg/sma-compliance-monitoring-console)**  
+  Guideline and rule monitoring. Outputs: breach log, pre/post-trade checks.
+
+## Design Principles
+
+- **Visualization-first:** dashboards and charts communicate decisions, not just metrics.
+- **Explainability:** every project maps outputs to a decision memo format.
 - **Scalable workflows:** modular architecture (analytics, API, app, pipeline, SQL).
 - **Professional usability:** reproducible runs, test coverage, and integration-ready interfaces.
 
-## Repository map
+## Getting Started
 
-| Repository | Primary focus | Typical outputs |
-|---|---|---|
-| `sma-risk-visual-analytics-platform` | Multi-asset risk dashboards and stress views | Risk panels, scenario visuals, monitoring tables |
-| `sma-allocation-scenario-studio` | Strategic/tactical allocation under scenarios | Allocation what-if charts, regime comparison |
-| `sma-portfolio-construction-optimizer` | Constrained portfolio construction | Optimized weights, constraint diagnostics |
-| `sma-rebalancing-trade-workbench` | Drift-aware rebalance and trade generation | Trade lists, turnover/cost impact |
-| `sma-performance-attribution-studio` | Benchmark-relative performance attribution | Attribution waterfall, sleeve diagnostics |
-| `sma-compliance-monitoring-console` | Guideline and rule monitoring | Breach log, pre/post-trade checks |
-| `sma-client-customization-lab` | Client restrictions and customization overlays | Constraint impact analysis, custom proposals |
-| `sma-data-foundation-platform` | Ingestion, quality controls, and data contracts | Validated datasets, quality reports |
-
-## Standard workflow
-
-1. Define decision question and portfolio context.
-2. Run data/pipeline steps and validate quality checks.
-3. Generate visual diagnostics and summary tables.
-4. Write interpretation and action recommendation.
-
-## Decision memo format
-
-- **Question:** What portfolio decision is being evaluated?
-- **Evidence:** Which charts/tables support the conclusion?
-- **Interpretation:** What changed and why it matters?
-- **Action:** Rebalance, hedge, monitor, or defer.
-
-## Submodule usage
-
-After cloning this parent repository:
+Each project is independent and can be cloned directly:
 
 ```bash
-git submodule update --init --recursive
+git clone https://github.com/john-stromberg/<project-name>.git
+cd <project-name>
+# See project README for local setup and execution instructions
 ```
 
